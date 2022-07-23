@@ -1,8 +1,12 @@
-package ua.intellistart.quiz.model;
+package ua.intellistart.quiz.businesslogic;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ua.intellistart.quiz.data.MarketplaceDataService;
+import ua.intellistart.quiz.model.Product;
+import ua.intellistart.quiz.model.Purchase;
+import ua.intellistart.quiz.model.User;
+
 import java.math.BigDecimal;
 import java.util.List;
 import java.util.stream.Collectors;

@@ -6,7 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import ua.intellistart.quiz.model.Marketplace;
+import ua.intellistart.quiz.businesslogic.Marketplace;
 
 import java.math.BigDecimal;
 

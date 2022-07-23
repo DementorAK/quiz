@@ -1,8 +1,11 @@
-package ua.intellistart.quiz.model;
+package ua.intellistart.quiz.businesslogic;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import ua.intellistart.quiz.businesslogic.Marketplace;
+import ua.intellistart.quiz.model.Product;
+import ua.intellistart.quiz.model.User;
 
 import java.math.BigDecimal;
 import java.util.List;
