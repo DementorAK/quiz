@@ -24,7 +24,7 @@ public class MarketplaceDataService {
         this.productsRepository = productsRepository;
         this.usersRepository = usersRepository;
         this.purchaseRepository = purchaseRepository;
-    };
+    }
 
     public void saveProduct(Product product){
         productsRepository.save(product);
@@ -70,10 +70,6 @@ public class MarketplaceDataService {
 
     public List<Purchase> getPurchasesByProduct(Product product) {
         return purchaseRepository.findByProduct(product);
-    }
-
-    public List<Purchase> getPurchases() {
-        return (List<Purchase>) purchaseRepository.findAll();
     }
 
     @Transactional

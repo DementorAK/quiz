@@ -1,7 +1,6 @@
 package ua.intellistart.quiz.model;
 
 import javax.persistence.*;
-import java.util.UUID;
 
 @Entity
 @Table(name = "purchases")
@@ -9,13 +8,13 @@ public class Purchase {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id", nullable = false)
-    private UUID id;
+    private long id;
 
-    @ManyToOne(cascade = {CascadeType.MERGE})
+    @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
 
-    @ManyToOne(cascade = {CascadeType.MERGE})
+    @ManyToOne
     @JoinColumn(name = "product_id")
     private Product product;
 
@@ -27,7 +26,7 @@ public class Purchase {
         this.product = product;
     }
 
-    public void setId(UUID id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -39,7 +38,7 @@ public class Purchase {
         this.product = product;
     }
 
-    public UUID getId() {
+    public long getId() {
         return id;
     }
 

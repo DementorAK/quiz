@@ -22,15 +22,16 @@ public class MarketplaceRestController {
                 "\n<BR /><B><A href=/test>/test</A></B> - load test data (3 users and 3 products)" +
                 "\n<BR /><B><A href=/users>/users</A></B> - print list of users" +
                 "\n<BR /><B><A href=/products>/products</A></B> - print list of products" +
-                "\n<BR /><HR />" +
-                "\n<BR /><B>/add_user?first=[First name]&last=[Last name]&amount=[Amount of money]</B> - add new user to marketplace, e.g. <A href=/add_user?first=Vasya&last=Pupkin&amount=123.50>/add_user?first=Vasya&last=Pupkin&amount=123.50</A>" +
+                "\n<BR />" +
+                "\n<HR /><B>/add_user?first=[First name]&last=[Last name]&amount=[Amount of money]</B> - add new user to marketplace, e.g. <A href=/add_user?first=Vasya&last=Pupkin&amount=123.50>/add_user?first=Vasya&last=Pupkin&amount=123.50</A>" +
                 "\n<BR /><B>/add_product?name=[Name of product]&price=[Price]</B> - add new product to marketplace, e.g. <A href=/add_product?name=Bubble%20gum&price=75.50>/add_product?name=Bubble gum&price=75.50</A>" +
-                "\n<BR /><B>/add_purchase?user=[User ID]&product=[Product ID]</B> - add new purchase on marketplace, e.g. <A href=/add_purchase?user=1&product=1>/add_purchase?user=1&product=1</A>" +
-                "\n<BR /><HR />" +
-                "\n<BR /><B>/purchases_by_user?user=[User ID]</B> - print list of products from the user's purchases, e.g. <A href=/purchases_by_user?user=1>/purchases_by_user?user=1</A>" +
+                "\n<BR />" +
+                "\n<HR /><B>/add_purchase?user=[User ID]&product=[Product ID]</B> - add new purchase on marketplace, e.g. <A href=/add_purchase?user=1&product=1>/add_purchase?user=1&product=1</A>" +
+                "\n<BR />" +
+                "\n<HR /><B>/purchases_by_user?user=[User ID]</B> - print list of products from the user's purchases, e.g. <A href=/purchases_by_user?user=1>/purchases_by_user?user=1</A>" +
                 "\n<BR /><B>/purchases_by_product?product=[Product ID]</B> - print list of users from product purchases, e.g. <A href=/purchases_by_product?product=1>/purchases_by_product?product=1</A>" +
-                "\n<BR /><HR />" +
-                "\n<BR /><B>/delete_user?id=[User ID]</B> - delete user and his purchases, e.g. <A href=/delete_user?id=1>/delete_user?id=1</A>" +
+                "\n<BR />" +
+                "\n<HR /><B>/delete_user?id=[User ID]</B> - delete user and his purchases, e.g. <A href=/delete_user?id=1>/delete_user?id=1</A>" +
                 "\n<BR /><B>/delete_product?id=[Product ID]</B> - delete product and its purchases, e.g. <A href=/delete_product?id=1>/delete_product?id=1</A>";
     }
 

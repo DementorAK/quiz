@@ -78,7 +78,10 @@ public class Marketplace {
     public String deleteUserById(long id) throws Exception {
         User user = marketplaceDataService.getUserById(id);
         List<Purchase> purchases = marketplaceDataService.getPurchasesByUser(user);
-        String result = user.getFullName() + " and his " + purchases.size() + " purchases have been deleted";
+        String result = String.format(
+                "'%s' and his %d purchases have been deleted",
+                user.getFullName(),
+                purchases.size());
         marketplaceDataService.deleteUser(user);
         return result;
     }
@@ -96,11 +99,12 @@ public class Marketplace {
                 })
                 .distinct()
                 .collect(Collectors.toList());
-        String result = product.getName() +
-                " and its " + purchases.size() + " purchases have been deleted. " +
-                users.size() + " users received a refund";
+        String result = String.format(
+                "'%s' and its %d purchases have been deleted. %d users received a refund",
+                product.getName(),
+                purchases.size(),
+                users.size());
         marketplaceDataService.deleteProductAndUpdateUsers(product, users);
-        purchases = marketplaceDataService.getPurchases();
         return result;
     }
 }
